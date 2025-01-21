@@ -10,7 +10,7 @@ import random
 def store_data():
     """stores data in a list called data_set"""
     data_set=[] #[[param1,param2,param3,param4,param5,param6,classe],[...]...]
-    with open(r"D:\Janine's Documents\ESILV\S5\DATA IA\dataset (1).csv", 'r') as data:
+    with open(r"dataset(1).csv", 'r') as data:
         reader=csv.reader(data,delimiter=';')
         for row in reader:
             L=[]
@@ -75,7 +75,7 @@ def preTest():
     
     #store pretest data
     pretest_set=[] #[[param1,param2,param3,param4,param5,param6,classe],[...]...]
-    with open(r"D:\Janine's Documents\ESILV\S5\DATA IA\pretest.csv", 'r') as data:
+    with open(r"pretest.csv", 'r') as data:
         reader=csv.reader(data,delimiter=';')
         for row in reader:
             L=[]
@@ -114,7 +114,7 @@ def finalTest():
     
     #store final data
     finaltest_set=[] #[[param1,param2,param3,param4,param5,param6],[...]...]
-    with open(r"D:\Janine's Documents\ESILV\S5\DATA IA\finaltest.csv", 'r') as data:
+    with open(r"finaltest.csv", 'r') as data:
         reader=csv.reader(data,delimiter=';')
         for row in reader:
             L=[]
@@ -125,7 +125,7 @@ def finalTest():
     data.close()
     
     #write class predictions for data in a file
-    with open(r"D:\Janine's Documents\ESILV\S5\DATA IA\ALI AHMAD JANINE_ALIYEVA ROYA_GROUPE A.txt",'w') as result:
+    with open(r"ALI AHMAD JANINE_ALIYEVA ROYA_GROUPE A.txt",'w') as result:
         for test in finaltest_set:
             class_pred=KNN(test,4) #we predict class for ever data
             result.write(str(class_pred)+"\n") #we write prediction in file
