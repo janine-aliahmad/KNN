@@ -35,6 +35,4 @@ This project implements the **K-Nearest Neighbors (KNN)** algorithm as part of a
 ## License
 This project was developed for educational purposes as part of an **Intro to AI** course with my team mate Roya Aliyeva.
 
----
-Developed by **Janine** 🚀
 
